@@ -6,3 +6,5 @@ instances = {
   }
 
 }
+
+env = "dev"
