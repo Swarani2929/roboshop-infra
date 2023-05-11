@@ -1,10 +1,3 @@
-data "aws_caller_identity" "current" {}
-
-data "aws_ami" "ami" {
-  most_recent = true
-  name_regex  = "devops-practice-with-ansible"
-  owners      = [data.aws_caller_identity.current.account_id]
-}
 
 
 resource "aws_instance" "ec2" {
@@ -65,5 +58,36 @@ resource "aws_route53_record" "record" {
   records = [aws_instance.ec2.private_ip]
 }
 
+resource "aws_iam_policy" "ssm-policy" {
+  name        = "${var.env}-${var.component}-ssm"
+  path        = "/"
+  description = "${var.env}-${var.component}-ssm"
+
+  # Terraform's "jsonencode" function converts a
+  # Terraform expression result to valid JSON syntax.
+  policy = jsonencode({
+
+    "Version" : "2012-10-17",
+    "Statement" : [
+  {
+    "Sid" : "VisualEditor0",
+    "Effect" : "Allow",
+    "Action" : [
+    "ssm:GetParameterHistory",
+    "ssm:GetParametersByPath",
+    "ssm:GetParameters",
+    "ssm:GetParameter"
+  ],
+    "Resource" : "arn:aws:ssm:us-east-1:813674118900:parameter/${var.env}.${var.component}"
+  },
+  {
+    "Sid" : "VisualEditor1",
+    "Effect" : "Allow",
+    "Action" : "ssm:DescribeParameters",
+    "Resource" : "*"
+  }
+  ]
+  })
+}
 
 
