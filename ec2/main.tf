@@ -78,7 +78,7 @@ resource "aws_iam_policy" "ssm-policy" {
     "ssm:GetParameters",
     "ssm:GetParameter"
   ],
-    "Resource" : "arn:aws:ssm:us-east-1:813674118900:parameter/${var.env}.${var.component}"
+    "Resource" : "arn:aws:ssm:us-east-1:813674118900:parameter/${var.env}.${var.component}*"
   },
   {
     "Sid" : "VisualEditor1",
