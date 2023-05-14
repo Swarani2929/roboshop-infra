@@ -6,7 +6,7 @@ parameters = [
   { name = "dev.frontend.payment_url", value = "http://payment-dev.devops25.online:8080/", type = "String" },
   { name = "dev.user.mongo", value = "true", type = "String" },
   { name = "dev.user.redis_host", value = "redis-dev.devops25.online", type = "String" },
-  { name = "dev.user.mongo_url", value = "mongodb://mongodb-dev.devops25.online:27017/catalogue", type = "String" },
+  { name = "dev.user.mongo_url", value = "mongodb://mongodb-dev.devops25.online:27017/users", type = "String" },
   { name = "dev.shipping.cart_endpoint", value = "cart-dev.devops25.online:8080", type = "String" },
   { name = "dev.shipping.db_host", value = "mysql-dev.devops25.online", type = "String" },
   { name = "dev.payment.cart_host", value = "cart-dev.devops25.online", type = "String" },
