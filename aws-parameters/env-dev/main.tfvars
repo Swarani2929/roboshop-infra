@@ -6,14 +6,16 @@ parameters = [
   {name = "dev.frontend.payment_url", value = "http://payment-dev.devops25.online:8080/", type = "String"},
   {name = "dev.user.mongo", value = "true", type = "String"},
   {name = "dev.user.redis_host", value = "dev-redis.devops25.online/", type = "String"},
-  {name = "dev.user.mongo_url", value = "mongodb://mongodb-dev.devops25.online:27017/users/", type = "String"},
+  {name = "dev.user.mongo_url", value = "mongodb://mongodb-dev.devops25.online:27017/users", type = "String"},
   {name = "dev.shipping.cart_endpoint", value = "cart-dev.devops25.online", type = "String"},
   {name = "dev.shipping.db_host", value = "mysql-dev.devops25.online", type = "String"},
   {name = "dev.payment.cart_host", value = "cart-dev.devops25.online", type = "String"},
   {name = "dev.payment.cart_port", value = "8080", type = "String"},
   {name = "dev.payment.user_host", value = "user-dev.devops25.online", type = "String"},
   {name = "dev.payment.user_port", value = "8080", type = "String"},
-  {name = "dev.payment.amqp_host", value = "rabbitmq-dev.devops25.online", type = "String"}
+  {name = "dev.payment.amqp_host", value = "rabbitmq-dev.devops25.online", type = "String"},
+  {name = "dev.catalogue.mongo", value = "true", type = "String"},
+  {name = "dev.catalogue.mongo_url", value = "mongodb://mongodb-dev.devops25.online:27017/catalogue", type = "String"}
 
 
 ]
