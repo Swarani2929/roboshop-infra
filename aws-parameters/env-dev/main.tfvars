@@ -15,8 +15,10 @@ parameters = [
   {name = "dev.payment.user_port", value = "8080", type = "String"},
   {name = "dev.payment.amqp_host", value = "rabbitmq-dev.devops25.online", type = "String"},
   {name = "dev.catalogue.mongo", value = "true", type = "String"},
-  {name = "dev.catalogue.mongo_url", value = "mongodb://mongodb-dev.devops25.online:27017/catalogue", type = "String"}
-
+  {name = "dev.catalogue.mongo_url", value = "mongodb://mongodb-dev.devops25.online:27017/catalogue", type = "String"},
+  {name = "dev.cart.redis_host", value = "redis-dev.devops25.online", type = "String"},
+  {name = "dev.cart.catalogue_host", value = "catalogue-dev.devops25.online", type = "String"},
+  {name = "dev.cart.catalogue_port", value = "8080", type = "String"}
 
 ]
 
