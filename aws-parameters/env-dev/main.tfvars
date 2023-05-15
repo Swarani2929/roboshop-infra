@@ -23,5 +23,7 @@ parameters = [
 
 secrets = [
 
-  {}
+  { name = "dev.mysql.password", value = "RoboShop@1", type = "SecureString" },
+  { name = "dev.payment.amqp_user", value = "roboshop", type = "SecureString" },
+  { name = "dev.payment.amqp_host", value = "roboshop123", type = "SecureString" },
 ]
